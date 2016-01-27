@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "Devangari";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/AdobeDevanagari-Regular.eot?#iefix") format("embedded-opentype"), url("../font/AdobeDevanagari-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "DevangariItalic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/AdobeDevanagari-Italic.woff") format("woff");
+}
+body {
+	background:#3d0001;
+	padding:0px;
+	margin:0px;
+	/*-ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select:none;*/
+}
+
+.page {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+}
+.pageHidden {
+	display:none;
+	opacity:0;
+}
+.hide {
+	opacity:0;
+}
+#border {
+	position:fixed;
+	top:24px;
+	left:24px;
+	border:1px solid #edcc9c;
+	z-index:3;
+}
+#logo {
+	position:fixed;
+	top:0px;
+	left:0px;
+	opacity:0;
+	z-index:4;
+	cursor:pointer;
+}
+#text {
+	font-family:"Devangari", "Times";
+	font-size:30px;
+	color:#edcc9c;
+	font-variant:small-caps;
+}
+#background {
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:0;
+}
+#background > img {
+	width:100%;
+	height:100%;
+}
+#layer {
+	position:fixed;
+	background:#3d0001;
+	opacity:0.68;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+#menu_button {
+	opacity:0;
+	position:absolute;
+	z-index:1000;
+	top:39px;
+	left:70px;
+	font-family:"Devangari", "Times";
+	font-size:18px;
+	color:#edcc9c;
+	font-variant:small-caps;
+	cursor:pointer;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	
+}
+#menu_container {
+	top:20%;
+	position:absolute;
+	z-index:4;
+	display:none;
+	opacity:0;
+	width:100%;
+}
+a.menu_item:link, a.menu_item:active, a.menu_item:visited {
+	font-size:25px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	font-variant:small-caps;
+	text-decoration:none;
+	margin-bottom:20px;
+	display:block;
+	opacity:0;
+}
+a.menu_item:hover {
+	text-decoration:underline;
+}
+#clickableZone {
+	position:absolute;
+	top:59px;
+	left:59px;
+	width:105px;
+	height:28px;
+	z-index:6;
+	cursor:pointer;
+}
+#intro {
+	width:100%;
+	margin-top:20%;
+	z-index:20;
+	position:fixed;
+	opacity:0;
+	cursor:default;
+	
+}
+#intro span.bigTitle {
+	font-size:36px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	font-variant:small-caps;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display:block;
+}
+#intro span.bigTitle2 {
+	font-size:55px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	font-variant:small-caps;
+	display:block;
+	margin-top:-28px;
+}
+
+#intro span.press_text {
+	font-size:22px;
+	font-family:"DevangariItalic", "Times";
+	color:#edcc9c;
+	font-variant:small-caps;
+}
+#intro span.press_name {
+	font-size:20px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+#startLink:active, #startLink:visited, #startLink:link {
+	font-size:30px;
+	font-family:"DevangariItalic", "Times";
+	color:#edcc9c;
+	text-decoration:none;
+	border:1px solid #edcc9c;
+	padding-top:6px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:4px;
+}
+
+
+
+#bottomCopyright {
+	position:fixed;
+	bottom:30px;
+	left:0px;
+	width:100%;
+	height:25px;
+	z-index:4;
+	text-align:center;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	font-size:15px;
+	opacity:0.80;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.pageLeft, .pageRight {
+	width:50%;
+	height:100%;
+}
+.pageLeft {float:left;}
+.pageRight {float:right;}
+.pageContainer {
+	display: table;
+	width:100%;
+	height:100%;
+}
+.pageCenter {
+	display:table-cell;
+	vertical-align:middle;
+}
+h1.pageMainTitle {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	font-size:50px;
+	font-variant:small-caps;
+	font-weight:normal;
+}
+p.pageText {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family:"Arial";
+	color:#edcc9c;
+	font-size:15px;
+	font-weight:normal;
+}
+a.pageButton:active, a.pageButton:visited, a.pageButton:link {
+	display:inline-block;
+	font-size:18px;
+	font-family:"DevangariItalic", "Times";
+	color:#edcc9c;
+	text-decoration:none;
+	border:1px solid #edcc9c;
+	padding-top:4px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:2px;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+span#tableTitle {
+	display:inline-block;
+	font-size:18px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-variant:small-caps;
+	margin-top:50px;
+}
+.pageCenter hr {
+	width:60px;
+	height:1px;
+	border:0px solid transparent;
+	background:#edcc9c;
+	color:#edcc9c;
+}
+td.tdNumber {
+	font-size:18px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-align:right;
+}
+td.tdPerformanceTitle {
+	font-size:25px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	padding-left:45px;
+	vertical-align:middle;
+}
+td.tdShowPicture > span{
+	display:inline-block;
+	width:29px;
+	height:29px;
+	background:rgba(108, 2, 4, 0.70);
+	cursor:pointer;
+	
+}
+td.tdShowPicture > span > img {
+	vertical-align:middle;
+	margin-top:4px;
+	margin-left:6px;
+}
+#tableShow tr {
+	height:35px;
+}
+#tableShow {
+	width:100%;
+}
+.showPictureButton {
+	border:1px solid rgba(108, 2, 4, 0.70);
+}
+.showPictureButtonActive {
+	border:1px solid rgba(237, 204, 156, .7);
+}
+#showSymbol {
+	position:absolute;
+	bottom:30px;
+	right:30px;
+	opacity:.60;
+	z-index:2;
+}
+#showBackground {
+	position:relative;
+	top:0px;
+	left:0px;
+	z-index:1;
+	background-image:url('../img/fire.jpg');
+	background-size:cover;
+	width:100%;
+	height:100%;
+	opacity:1;
+}
+#artistListOpen {
+	width:150px;
+	height:40px;
+	background:rgba(108, 2, 4, 0.70);
+	position:absolute;
+	top:24px;
+	right:24px;
+	z-index:1;
+	
+	border-bottom:2px solid #edcc9c;
+	cursor:pointer;
+	overflow:hidden;
+}
+	#artistListOpen .seetheartists {
+		display:inline-block;
+		font-size:20px;
+		font-family:"DevangariItalic", "Times";
+		color:#edcc9c;
+		font-variant:small-caps;
+		margin-top:8px;
+		
+	}
+#artistListOpen hr {
+	width:60px;
+	height:1px;
+	border:0px solid transparent;
+	background:#edcc9c;
+	color:#edcc9c;
+}
+.artist {
+	padding:5px;
+}
+.artistPicture {
+	width:30px;
+	height:30px;
+}
+.artistName {
+	font-size:13px;
+	font-family:"DevangariItalic", "Times";
+	color:#edcc9c;
+		-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	line-height:0;
+}
+#artistListContainer {
+	width:560px;
+	position:absolute;
+	top:44px;
+	left:0px;
+}
+	#artistListContainer > .artistListContainerItem {
+		position:absolute;
+		top:0px;
+		width:150px;
+	}
+.pageAddress {
+	font-size:22px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	font-variant:small-caps;
+}
+td.contactIconTd {
+	text-align:right;
+}
+td.contactInfoTd a:active, td.contactInfoTd a:visited, td.contactInfoTd a:link{
+	font-size:20px;
+	font-family:"Devangari", "Times";
+	color:#edcc9c;
+	padding-left:20px;
+	text-decoration:none;
+}
+td.contactInfoTd a:hover {
+	text-decoration:underline;
+}
